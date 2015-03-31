@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Laravel Course" uuid="b01caad2-e74e-4701-a313-43356913f4cd">
+      <secret-storage>master_key</secret-storage>
+      <user-name>homestead</user-name>
+      <schema-pattern>course.*</schema-pattern>
+      <default-schemas>course.*</default-schemas>
+    </data-source>
+  </component>
+</project>
