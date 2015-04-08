@@ -1,7 +1,7 @@
 <?php
 /**
  * An helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.0.17 on 2015-03-25.
+ * Generated for Laravel 5.0.23 on 2015-03-31.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -437,6 +437,47 @@ namespace {
          */
         public static function getCachedRoutesPath(){
             return \Illuminate\Foundation\Application::getCachedRoutesPath();
+        }
+        
+        /**
+         * Get the path to the cached "compiled.php" file.
+         *
+         * @return string 
+         * @static 
+         */
+        public static function getCachedCompilePath(){
+            return \Illuminate\Foundation\Application::getCachedCompilePath();
+        }
+        
+        /**
+         * Get the path to the cached services.json file.
+         *
+         * @return string 
+         * @static 
+         */
+        public static function getCachedServicesPath(){
+            return \Illuminate\Foundation\Application::getCachedServicesPath();
+        }
+        
+        /**
+         * Determine if vendor path is writable.
+         *
+         * @return bool 
+         * @static 
+         */
+        public static function vendorIsWritableForOptimizations(){
+            return \Illuminate\Foundation\Application::vendorIsWritableForOptimizations();
+        }
+        
+        /**
+         * Determines if storage directory should be used for optimizations.
+         *
+         * @param bool $value
+         * @return $this 
+         * @static 
+         */
+        public static function useStoragePathForOptimizations($value = true){
+            return \Illuminate\Foundation\Application::useStoragePathForOptimizations($value);
         }
         
         /**
@@ -1133,7 +1174,7 @@ namespace {
         }
         
         /**
-         * Determine if the current user is authenticated.
+         * Determine if the current users is authenticated.
          *
          * @return bool 
          * @static 
@@ -1143,7 +1184,7 @@ namespace {
         }
         
         /**
-         * Determine if the current user is a guest.
+         * Determine if the current users is a guest.
          *
          * @return bool 
          * @static 
@@ -1153,7 +1194,7 @@ namespace {
         }
         
         /**
-         * Get the currently authenticated user.
+         * Get the currently authenticated users.
          *
          * @return \Course\User|null 
          * @static 
@@ -1163,7 +1204,7 @@ namespace {
         }
         
         /**
-         * Get the ID for the currently authenticated user.
+         * Get the ID for the currently authenticated users.
          *
          * @return int|null 
          * @static 
@@ -1173,7 +1214,7 @@ namespace {
         }
         
         /**
-         * Log a user into the application without sessions or cookies.
+         * Log a users into the application without sessions or cookies.
          *
          * @param array $credentials
          * @return bool 
@@ -1184,7 +1225,7 @@ namespace {
         }
         
         /**
-         * Validate a user's credentials.
+         * Validate a users's credentials.
          *
          * @param array $credentials
          * @return bool 
@@ -1217,7 +1258,7 @@ namespace {
         }
         
         /**
-         * Attempt to authenticate a user using the given credentials.
+         * Attempt to authenticate a users using the given credentials.
          *
          * @param array $credentials
          * @param bool $remember
@@ -1241,7 +1282,7 @@ namespace {
         }
         
         /**
-         * Log a user into the application.
+         * Log a users into the application.
          *
          * @param \Illuminate\Contracts\Auth\Authenticatable $user
          * @param bool $remember
@@ -1253,7 +1294,7 @@ namespace {
         }
         
         /**
-         * Log the given user ID into the application.
+         * Log the given users ID into the application.
          *
          * @param mixed $id
          * @param bool $remember
@@ -1265,7 +1306,7 @@ namespace {
         }
         
         /**
-         * Log the given user ID into the application without sessions or cookies.
+         * Log the given users ID into the application without sessions or cookies.
          *
          * @param mixed $id
          * @return bool 
@@ -1276,7 +1317,7 @@ namespace {
         }
         
         /**
-         * Log the user out of the application.
+         * Log the users out of the application.
          *
          * @return void 
          * @static 
@@ -1339,7 +1380,7 @@ namespace {
         }
         
         /**
-         * Get the user provider used by the guard.
+         * Get the users provider used by the guard.
          *
          * @return \Illuminate\Contracts\Auth\UserProvider 
          * @static 
@@ -1349,7 +1390,7 @@ namespace {
         }
         
         /**
-         * Set the user provider used by the guard.
+         * Set the users provider used by the guard.
          *
          * @param \Illuminate\Contracts\Auth\UserProvider $provider
          * @return void 
@@ -1360,7 +1401,7 @@ namespace {
         }
         
         /**
-         * Return the currently cached user of the application.
+         * Return the currently cached users of the application.
          *
          * @return \Course\User|null 
          * @static 
@@ -1370,7 +1411,7 @@ namespace {
         }
         
         /**
-         * Set the current user of the application.
+         * Set the current users of the application.
          *
          * @param \Illuminate\Contracts\Auth\Authenticatable $user
          * @return void 
@@ -1402,7 +1443,7 @@ namespace {
         }
         
         /**
-         * Get the last user we attempted to authenticate.
+         * Get the last users we attempted to authenticate.
          *
          * @return \Course\User 
          * @static 
@@ -1432,7 +1473,7 @@ namespace {
         }
         
         /**
-         * Determine if the user was authenticated via "remember me" cookie.
+         * Determine if the users was authenticated via "remember me" cookie.
          *
          * @return bool 
          * @static 
@@ -2073,7 +2114,7 @@ namespace {
         }
         
         /**
-         * Checks if macro is registered
+         * Checks if macro is registered.
          *
          * @param string $name
          * @return bool 
@@ -2387,7 +2428,7 @@ namespace {
         }
         
         /**
-         * Get the cookies which have been queued for the next request
+         * Get the cookies which have been queued for the next request.
          *
          * @return array 
          * @static 
@@ -2992,7 +3033,7 @@ namespace {
         /**
          * Get the schema grammar used by the connection.
          *
-         * @return \Illuminate\Database\Query\Grammars\Grammar 
+         * @return \Illuminate\Database\Schema\Grammars\Grammar 
          * @static 
          */
         public static function getSchemaGrammar(){
@@ -5000,7 +5041,7 @@ namespace {
         }
         
         /**
-         * Checks if macro is registered
+         * Checks if macro is registered.
          *
          * @param string $name
          * @return bool 
@@ -5541,7 +5582,7 @@ namespace {
         }
         
         /**
-         * Get the user making the request.
+         * Get the users making the request.
          *
          * @return mixed 
          * @static 
@@ -5561,7 +5602,7 @@ namespace {
         }
         
         /**
-         * Get the user resolver callback.
+         * Get the users resolver callback.
          *
          * @return \Closure 
          * @static 
@@ -5571,7 +5612,7 @@ namespace {
         }
         
         /**
-         * Set the user resolver callback.
+         * Set the users resolver callback.
          *
          * @param \Closure $callback
          * @return $this 
@@ -6081,7 +6122,7 @@ namespace {
         }
         
         /**
-         * Returns the user.
+         * Returns the users.
          *
          * @return string|null 
          * @static 
@@ -6103,9 +6144,9 @@ namespace {
         }
         
         /**
-         * Gets the user info.
+         * Gets the users info.
          *
-         * @return string A user name and, optionally, scheme-specific information about how to gain authorization to access the server
+         * @return string A users name and, optionally, scheme-specific information about how to gain authorization to access the server
          * @static 
          */
         public static function getUserInfo(){
@@ -6142,7 +6183,7 @@ namespace {
         /**
          * Gets the scheme and HTTP host.
          * 
-         * If the URL was called with basic authentication, the user
+         * If the URL was called with basic authentication, the users
          * and the password are not added to the generated string.
          *
          * @return string The scheme and HTTP host
@@ -6325,7 +6366,7 @@ namespace {
          * 
          * Here is the process to determine the format:
          * 
-         *  * format defined by the user (with setRequestFormat())
+         *  * format defined by the users (with setRequestFormat())
          *  * _format request parameter
          *  * $default
          *
@@ -6484,7 +6525,7 @@ namespace {
         /**
          * Gets a list of languages acceptable by the client browser.
          *
-         * @return array Languages ordered in the user browser preferences
+         * @return array Languages ordered in the users browser preferences
          * @api 
          * @static 
          */
@@ -6922,7 +6963,7 @@ namespace {
          * Register an error_log handler.
          *
          * @param string $level
-         * @param integer $messageType
+         * @param int $messageType
          * @return void 
          * @static 
          */
@@ -6931,8 +6972,7 @@ namespace {
         }
         
         /**
-         * Register a new callback handler for when
-         * a log event is triggered.
+         * Register a new callback handler for when a log event is triggered.
          *
          * @param \Closure $callback
          * @return void 
@@ -6966,7 +7006,7 @@ namespace {
         /**
          * Set the event dispatcher instance.
          *
-         * @param \Illuminate\Contracts\Events\Dispatcher
+         * @param \Illuminate\Contracts\Events\Dispatcher $dispatcher
          * @return void 
          * @static 
          */
@@ -7200,7 +7240,7 @@ namespace {
     class Password extends \Illuminate\Support\Facades\Password{
         
         /**
-         * Send a password reset link to a user.
+         * Send a password reset link to a users.
          *
          * @param array $credentials
          * @param \Closure|null $callback
@@ -7259,7 +7299,7 @@ namespace {
         }
         
         /**
-         * Get the user for the given credentials.
+         * Get the users for the given credentials.
          *
          * @param array $credentials
          * @return \Illuminate\Contracts\Auth\CanResetPassword 
@@ -7499,17 +7539,6 @@ namespace {
         public static function bulk($jobs, $data = '', $queue = null){
             //Method inherited from \Illuminate\Queue\Queue            
             return \Illuminate\Queue\SyncQueue::bulk($jobs, $data, $queue);
-        }
-        
-        /**
-         * Get the current UNIX timestamp.
-         *
-         * @return int 
-         * @static 
-         */
-        public static function getTime(){
-            //Method inherited from \Illuminate\Queue\Queue            
-            return \Illuminate\Queue\SyncQueue::getTime();
         }
         
         /**
@@ -8170,7 +8199,7 @@ namespace {
         }
         
         /**
-         * Get the user making the request.
+         * Get the users making the request.
          *
          * @return mixed 
          * @static 
@@ -8190,7 +8219,7 @@ namespace {
         }
         
         /**
-         * Get the user resolver callback.
+         * Get the users resolver callback.
          *
          * @return \Closure 
          * @static 
@@ -8200,7 +8229,7 @@ namespace {
         }
         
         /**
-         * Set the user resolver callback.
+         * Set the users resolver callback.
          *
          * @param \Closure $callback
          * @return $this 
@@ -8710,7 +8739,7 @@ namespace {
         }
         
         /**
-         * Returns the user.
+         * Returns the users.
          *
          * @return string|null 
          * @static 
@@ -8732,9 +8761,9 @@ namespace {
         }
         
         /**
-         * Gets the user info.
+         * Gets the users info.
          *
-         * @return string A user name and, optionally, scheme-specific information about how to gain authorization to access the server
+         * @return string A users name and, optionally, scheme-specific information about how to gain authorization to access the server
          * @static 
          */
         public static function getUserInfo(){
@@ -8771,7 +8800,7 @@ namespace {
         /**
          * Gets the scheme and HTTP host.
          * 
-         * If the URL was called with basic authentication, the user
+         * If the URL was called with basic authentication, the users
          * and the password are not added to the generated string.
          *
          * @return string The scheme and HTTP host
@@ -8954,7 +8983,7 @@ namespace {
          * 
          * Here is the process to determine the format:
          * 
-         *  * format defined by the user (with setRequestFormat())
+         *  * format defined by the users (with setRequestFormat())
          *  * _format request parameter
          *  * $default
          *
@@ -9113,7 +9142,7 @@ namespace {
         /**
          * Gets a list of languages acceptable by the client browser.
          *
-         * @return array Languages ordered in the user browser preferences
+         * @return array Languages ordered in the users browser preferences
          * @api 
          * @static 
          */
@@ -9344,7 +9373,7 @@ namespace {
         }
         
         /**
-         * Checks if macro is registered
+         * Checks if macro is registered.
          *
          * @param string $name
          * @return bool 
@@ -9713,7 +9742,7 @@ namespace {
         }
         
         /**
-         * Set a global where pattern on all routes
+         * Set a global where pattern on all routes.
          *
          * @param string $key
          * @param string $pattern
@@ -9725,7 +9754,7 @@ namespace {
         }
         
         /**
-         * Set a group of global where patterns on all routes
+         * Set a group of global where patterns on all routes.
          *
          * @param array $patterns
          * @return void 
@@ -9967,7 +9996,7 @@ namespace {
         }
         
         /**
-         * Checks if macro is registered
+         * Checks if macro is registered.
          *
          * @param string $name
          * @return bool 

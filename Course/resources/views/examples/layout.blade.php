@@ -12,6 +12,9 @@
     <img src="assets/styde.png" alt="200"/>
 </p>
 @yield('content')
-<p class="bottom">https://twitter.com/l10</p>
+<p class="bottom">
+    https://twitter.com/l10
+    @yield('footer')
+</p>
 </body>
 </html>

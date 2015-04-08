@@ -5,10 +5,9 @@ Curso Laravel de Luis Ovando
 @section('content')
     <h1>Curso básico de Laravel 5</h1>
     <p>
-        @if(isset($user))
-            Bienvenido {{$user}}
-        @else
-            [Login]
-        @endif
+        Bienvenido {{$user}}
     </p>
+@stop
+@section('footer')
+    <h5>Desarrollado por: {{$developer}}</h5>
 @stop

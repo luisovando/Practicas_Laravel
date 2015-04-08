@@ -52,7 +52,7 @@ return [
 	|
 	*/
 
-	'locale' => 'en',
+	'locale' => 'es',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -146,10 +146,11 @@ return [
 		'Course\Providers\RouteServiceProvider',
 
 		/*
-		 * Third-Party Service Providers...
+		 * Vendor Service Providers...
 		 */
 		'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 		"Laracasts\Generators\GeneratorsServiceProvider",
+		"Collective\Html\HtmlServiceProvider",
 	],
 
 	/*
@@ -197,6 +198,11 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
+		/**
+		 * Vendor Aliases
+		 */
+		'Form'      => 'Collective\Html\FormFacade',
+		'Html'      => 'Collective\Html\HtmlFacade'
 
 	],
 

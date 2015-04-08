@@ -102,6 +102,17 @@ return [
 	|
 	*/
 
-	'attributes' => [],
+	'attributes' => [
+        'alert-danger'       => 'There were some problems with your input.',
+        'email'              => 'E-Mail Address',
+        'password'           => 'Password',
+        'password_confirm'   => 'Confirm Password',
+        'remember_me'        => 'Remember Me',
+        'forgotten_password' => 'Forgot Your Password?',
+        'login'              => 'Login',
+        'title_login'        => 'Login',
+        'title_register'     => 'Register',
+        'name'               => 'Name',
+    ],
 
 ];

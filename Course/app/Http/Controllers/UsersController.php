@@ -1,6 +1,6 @@
 <?php namespace Course\Http\Controllers;
 
-use Course\User;
+use Course\Entities\User;
 
 class UsersController extends Controller{
     public function getOrm()
@@ -14,8 +14,8 @@ class UsersController extends Controller{
     }
 
     public function getClients(){
-        /*$user = User::find(23);
-        $client = $user->clients->first();
+        /*$users = User::find(23);
+        $client = $users->clients->first();
         dd($client->company->company_name);*/
 
         $users = User::select('id', 'first_name', 'email')
@@ -32,7 +32,7 @@ class UsersController extends Controller{
 
     public function getIndex()
     {
-        $result = \DB::table('users')
+        $users = \DB::table('users')
             ->select([
                 'users.*',
                 'user_profiles.id as profile_id',
@@ -41,9 +41,7 @@ class UsersController extends Controller{
             ->orderBy('id', 'ASC')
             ->leftJoin('user_profiles', 'users.id', "=", 'user_profiles.user_id')
             ->get();
-        //$result->full_name = $result->first_name . ' ' . $result->last_name;
-        dd($result);
-        return $result;
+        return view('example_one.fcontroller', ['users' => $users]);
     }
 
     public function getType($type = null)
