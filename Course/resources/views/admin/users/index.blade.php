@@ -29,4 +29,6 @@
             </div>
         </div>
     </div>
+    {!! Form::open(['route' => ['admin.users.destroy', ':ENTITY_ID'], 'method' => 'DELETE', 'class' => 'form-delete']) !!}
+    {!! Form::close() !!}
 @endsection
